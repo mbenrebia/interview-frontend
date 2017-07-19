@@ -30,14 +30,14 @@ class App extends Component {
 	* @returns {JSX} Phones names
 	*/
 	renderPhones(brand) {
-		return this.getPhonesBy(brand)
+		return <div className="phone_container">{this.getPhonesBy(brand)
 			.map(phone => {
 				return (
 					<div>
 						<label>{phone.name}</label>
 					</div>
 				)
-			});
+			})}</div>
 	}
 
 	/**
@@ -64,13 +64,13 @@ class App extends Component {
 				<div className="row-fluid">
 					<div className="col-md-offset-3 col-md-6">
 						<div className="well well-sm">
-							<div className="clearfix">
+							<div className="clearfix brand_container">
 								{
 									// This is valid since I can not return two HTML elements without root with JSX
 									this.brands.reduce((acc, brand) => acc.concat([
 										this.renderBrandName(brand),
 										this.renderPhones(brand)
-									]), [])
+									]) , [])
 								}
 							</div>
 						</div>

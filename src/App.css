@@ -16,6 +16,18 @@
 	color: white;
 }
 
+.brand_container{
+
+}
+
+.brand_container h1{
+		display: inline-block;
+		vertical-align: top;
+}
+
+.phone_container{
+	display: inline-block;
+}
 /* Bootstrap */
 dd {
 	text-align: left;
